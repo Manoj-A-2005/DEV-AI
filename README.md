@@ -34,15 +34,15 @@ DEV.x utilizes a decoupled, client-heavy architecture, leveraging a lightweight 
 
 ```mermaid
 graph TD
-    Client[Web Client / Browser]
-    Vercel[Vercel Serverless Edge]
-    Express[Express.js API]
-    Frontend[React + Vite SPA]
+    Client["Web Client / Browser"]
+    Vercel["Vercel Serverless Edge"]
+    Express["Express.js API"]
+    Frontend["React + Vite SPA"]
     
     subgraph Browser Engine
-      Frontend --> ChartJS[Chart.js Engine]
-      Frontend --> DataProcessor[In-Memory Data Pipeline]
-      Frontend --> ExportEngine[jsPDF / html2canvas]
+      Frontend --> ChartJS["Chart.js Engine"]
+      Frontend --> DataProcessor["In-Memory Data Pipeline"]
+      Frontend --> ExportEngine["jsPDF / html2canvas"]
     end
     
     Client -->|Static Assets| Frontend
@@ -64,17 +64,17 @@ graph TD
 
 ```mermaid
 flowchart TD
-    Start([User Visits App]) --> Landing[Landing Page]
-    Landing --> Dashboard[Dashboard Workspace]
-    Dashboard --> Upload[Upload Dataset]
-    Upload --> |CSV/XLSX/JSON| Backend[Backend Parsing]
-    Backend --> DataClean[Frontend: Auto-Cleaning & Inference]
-    DataClean --> Interface[Interactive Dashboard]
-    Interface --> NLQ[Natural Language Query]
-    Interface --> ManualChart[Manual Chart Builder]
-    NLQ --> Render[Render Visualization]
+    Start(["User Visits App"]) --> Landing["Landing Page"]
+    Landing --> Dashboard["Dashboard Workspace"]
+    Dashboard --> Upload["Upload Dataset"]
+    Upload --> |CSV/XLSX/JSON| Backend["Backend Parsing"]
+    Backend --> DataClean["Frontend: Auto-Cleaning & Inference"]
+    DataClean --> Interface["Interactive Dashboard"]
+    Interface --> NLQ["Natural Language Query"]
+    Interface --> ManualChart["Manual Chart Builder"]
+    NLQ --> Render["Render Visualization"]
     ManualChart --> Render
-    Render --> Export[Export Clean Data / PDF]
+    Render --> Export["Export Clean Data / PDF"]
 ```
 
 ---
@@ -296,10 +296,10 @@ DEV.x is optimized for **Vercel Serverless Edge**.
 
 ```mermaid
 graph LR
-    Dev[Developer] -->|Git Push| GitHub[GitHub Repo]
-    GitHub -->|Webhook| Vercel[Vercel CI/CD]
-    Vercel -->|Build| Static[Frontend Assets (CDN)]
-    Vercel -->|Deploy| Edge[Node.js Edge Functions]
+    Dev["Developer"] -->|Git Push| GitHub["GitHub Repo"]
+    GitHub -->|Webhook| Vercel["Vercel CI/CD"]
+    Vercel -->|Build| Static["Frontend Assets (CDN)"]
+    Vercel -->|Deploy| Edge["Node.js Edge Functions"]
     Static --> User
     Edge --> User
 ```
@@ -349,5 +349,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 <div align="center">
-  <sub>Made with ❤️ by Manoj-A-2005</sub>
+  <sub>Made  by Manoj-A-2005</sub>
 </div>
